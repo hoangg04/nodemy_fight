@@ -7,6 +7,7 @@
 	--orange: #f2726a;
 	--yellow: #fff5e4;
 	--pink: #ffe3e1;
+	--purple: #ecc5fb;
 	--peach: #ff9494;
 	--pink-100: #ffd1d1;
 }
@@ -42,7 +43,7 @@ body {
 	display: grid;
 	height: 100%;
 	gap: 1.5rem 1.5rem;
-	margin: 1.5rem;
+	margin: 6rem 1.5rem 0;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 }
@@ -127,6 +128,38 @@ body {
 	height: 100%;
 	width: 100%;
 	user-select: none;
+}
+.back {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--peach);
+	transition: 0.5s;
+	z-index: 100;
+}
+.back::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	display: block;
+	height: 0.2rem;
+	right: 0;
+	background-color: var(--peach);
+	transition: 0.25s;
+	width: 0;
+	z-index: 100;
+}
+.back:hover::before{
+	width: 70% ;
+}
+.back span {
+	font-size: 1.6rem;
+}
+.back ion-icon {
+	font-size: 2rem;
 }
 @media only screen and (max-width: 1024px) {
 	.modal-content {

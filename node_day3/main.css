@@ -138,3 +138,33 @@ body {
 	background-color: var(--blue-light);
 	border: 2px solid var(--green-dark);
 }
+.back {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--orange-light);
+	transition: 0.5s;
+}
+.back::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	display: block;
+	height: 0.2rem;
+	right: 0;
+	background-color: var(--orange-light);
+	transition: 0.25s;
+	width: 0;
+}
+.back:hover::before{
+	width: 70% ;
+}
+.back span {
+	font-size: 1.6rem;
+}
+.back ion-icon {
+	font-size: 2rem;
+}
