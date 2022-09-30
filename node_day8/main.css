@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,700&display=swap");
+:root {
+	--green: #4daf54;
+	--red: red;
+	--black: #242628;
+	--white: white;
+	--orange: #f2726a;
+	--yellow: #fff5e4;
+	--pink: #ffe3e1;
+	--purple: #ecc5fb;
+	--peach: #ff9494;
+	--pink-100: #ffd1d1;
+	--green-light: #97ffcf;
+	--blue-light: #2fe1d6;
+	--green-dark: #38c6bd;
+	--orange-light: #f57328;
+	--gray: #adadad;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+ul {
+	list-style: none;
+}
+
+html,
+body {
+	background-image: linear-gradient(45deg, var(--pink), var(--purple));
+	width: 100vw;
+	height: 100%;
+	font-size: 62.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	user-select: none;
+	position: relative;
+	padding: 1rem;
+}
+.back {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--orange-light);
+	transition: 0.5s;
+}
+.back::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	display: block;
+	height: 0.2rem;
+	right: 0;
+	background-color: var(--orange-light);
+	transition: 0.25s;
+	width: 0;
+}
+.back:hover::before {
+	width: 70%;
+}
+.back span {
+	font-size: 1.6rem;
+}
+.back ion-icon {
+	font-size: 2rem;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 40rem;
+	padding: 3rem 4rem;
+	width: 100%;
+	background-color: var(--white);
+	border-radius: 2rem;
+}
+.form h5 {
+	font-size: 3rem;
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	-webkit-text-fill-color: var(--blue-light);
+	animation: hue 3s infinite linear alternate forwards;
+}
+@keyframes hue {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+.form-control{
+	width: 100%;
+	margin: 1rem;
+}
+.form-control.error input + label,.form-control.error input:focus + label::before {
+	background-color: var(--red);
+	animation: none;
+}
+
+.form-control.success input + label,.form-control.success input:focus + label::before {
+	background-color: var(--green);
+	animation: none;
+}
+.form-control.error small{
+	color: var(--red);
+	text-transform: capitalize;
+}
+.form-control.success small{
+	color: var(--green);
+	text-transform: capitalize;
+}
+.form-control input {
+	width: 100%;
+	background-color: transparent;
+	height: 5rem;
+	border: none;
+	outline: none;
+	line-height: 1.8rem;
+	font-size: 1.6rem;
+	position: relative;
+	-webkit-text-fill-color: var(--blue-light);
+	animation: hue 3s linear infinite alternate forwards;
+}
+input:nth-of-type(1) {
+	animation-delay: 0.3s;
+}
+input:nth-of-type(2) {
+	animation-delay: 0.6s;
+}
+input:nth-of-type(3) {
+	animation-delay: 0.9s;
+}
+input:nth-of-type(4) {
+	animation-delay: 1.2s;
+}
+.form-control input::placeholder {
+	color: #9b9b9b;
+}
+#submit {
+	width: 100%;
+	text-align: center;
+	border: none;
+	height: max-content;
+	background-color: var(--green-light);
+	animation-delay: 0.2s;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	font-weight: 500;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+	cursor: pointer;
+	color: var(--black);
+	animation: hue 3s linear infinite alternate forwards;
+}
+
+.form-control input + label {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: var(--gray);
+	position: relative;
+	border-radius: 1rem;
+}
+.form-control input + label::before {
+	content: "";
+	top: 0;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	border-radius: inherit;
+	animation: hue 3s linear infinite alternate forwards;
+	animation-delay: 1.6s;
+}
+.form-control input:focus::placeholder {
+	-webkit-text-fill-color: var(--blue-light);
+	animation: hue 3s linear infinite alternate forwards;
+	animation-delay: 1.8s;
+}
+.form-control input:focus + label::before {
+	background-color: var(--blue-light);
+	width: 100%;
+}
+.register {
+	display: flex;
+	font-size: 1.6rem;
+	word-spacing: 0.2rem;
+}
+.register a {
+	margin-left: 0.5rem;
+	-webkit-text-fill-color: var(--blue-light);
+	animation: hue 3s linear infinite alternate forwards;
+	animation-delay: 2s;
+}

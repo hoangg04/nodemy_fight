@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,700&display=swap");
+:root {
+	--green: #4daf54;
+	--red: red;
+	--black: #242628;
+	--white: white;
+	--orange: #f2726a;
+	--yellow: #fff5e4;
+	--pink: #ffe3e1;
+	--purple: #ecc5fb;
+	--peach: #ff9494;
+	--pink-100: #ffd1d1;
+	--green-light: #97ffcf;
+	--blue-light: #2fe1d6;
+	--green-dark: #38c6bd;
+	--orange-light: #f57328;
+	--gray: #adadad;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+ul {
+	list-style: none;
+}
+
+html,
+body {
+	background:#C3F8FF ;
+	width: 100vw;
+	height: 100%;
+	font-size: 62.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	user-select: none;
+	position: relative;
+	padding: 1rem;
+	color: var(--white);
+}
+.back {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--orange-light);
+	transition: 0.5s;
+}
+.back::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	display: block;
+	height: 0.2rem;
+	right: 0;
+	background-color: var(--orange-light);
+	transition: 0.25s;
+	width: 0;
+}
+.back:hover::before {
+	width: 70%;
+}
+.back span {
+	font-size: 1.6rem;
+}
+.back ion-icon {
+	font-size: 2rem;
+}
+.card{
+	background: url(hot.png) center/cover;
+	width: 40rem;
+	height: 50rem;
+	box-shadow: 0 0 10px #ccc;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	padding: 3rem;
+	transition: 0.5s;
+}
+.card-search{
+	height: 4rem;
+	width: 100%;
+
+}
+.card-search input{
+	width: 100%;
+	background-color: var(--white);
+	border: none;
+    border-radius: 0rem 2rem ;
+	height: 100%;
+	outline: none;
+	box-shadow: 0 0 10px #ccc;
+	transition: 0.5s;
+	font-size: 1.6rem;
+	padding: 1rem;
+	margin-bottom: auto;
+}
+.card-search input:focus{
+    border-radius: 2rem 0rem ;
+}
+.card-location{
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	font-size: 1.6rem;
+	gap: 1.5rem;
+}
+
+.address{
+	font-size:2.5rem;
+	font-weight: 600;
+}
+.time{
+	font-size: 1.5rem;
+}
+.card-content{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	gap: 2rem;
+	transition: 0.5s;
+	opacity: 1;
+}
+.temperature{
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 1rem;
+	box-shadow: 3px 1px 6px black;
+	width: 70%;
+	height: 10rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.status{
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.wind{
+	display: flex;
+	gap: 1.5rem;
+	font-size: 1.6rem;
+}
+.visibility,.wind-speed,.humidity{
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+.inner-visibility{
+
+}
+.wind-speed{
+
+}
+.humidity{
+
+}

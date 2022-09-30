@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,700&display=swap");
+:root {
+	--green: #4daf54;
+	--red: red;
+	--black: #242628;
+	--white: white;
+	--orange: #f2726a;
+	--yellow: #fff5e4;
+	--pink: #ffe3e1;
+	--purple: #ecc5fb;
+	--peach: #ff9494;
+	--pink-100: #ffd1d1;
+	--green-light: #97ffcf;
+	--blue-light: #2fe1d6;
+	--green-dark: #38c6bd;
+	--orange-light: #f57328;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+ul {
+	list-style: none;
+}
+
+html,
+body {
+	background-image: linear-gradient(300deg, #ffe9ae, #c1efff);
+	width: 100vw;
+	min-height: 100vh;
+	font-size: 62.5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Poppins", sans-serif;
+}
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 7rem;
+}
+.input-search {
+	border: none;
+	background-color: var(--purple);
+	border-radius: 2rem 0 0rem 2rem;
+	height: 100%;
+	width: 0rem;
+	outline: none;
+	color: var(--white);
+	font-size: 3rem;
+	transition: 0.4s;
+	visibility: hidden;
+	opacity: 0;
+}
+.form label {
+	background-color: var(--white);
+	height: 100%;
+	display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7rem;
+	cursor: pointer;
+	border-radius: 0 2rem 2rem 0;
+	font-size: 3rem;
+	color: var(--orange);
+}
+.active.label {
+	border-radius: 2rem;
+}
+.active.input-search {
+	width: 30rem;
+	padding: 0 3rem;
+	opacity: 1;
+	visibility: visible;
+}
+.back {
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--peach);
+	transition: 0.5s;
+	z-index: 100;
+}
+.back::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	display: block;
+	height: 0.2rem;
+	right: 0;
+	background-color: var(--peach);
+	transition: 0.25s;
+	width: 0;
+	z-index: 100;
+}
+.back:hover::before {
+	width: 70%;
+}
+.back span {
+	font-size: 1.6rem;
+}
+.back ion-icon {
+	font-size: 2rem;
+}
